@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Team Meeting Minutes</title>
+  <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+  <header>
+    <h1>Project Updates</h1>
+    <img src="ucsd-brand-hero-2023.jpg" alt="ucsd brand" width="200">
+    <h2>Weekly Check-in</h2>
+    <h2> Date: 4/2/26</h2>
+  </header>
+
+  <main>
+    <section>
+      <h3>Attendance</h3>
+      <ul>
+        <li>John Doe</li>
+        <li>Jane Smith</li>
+        <li>Bob Johnson</li>
+      </ul>
+    </section>
+
+    <section>
+      <nav class="menu">
+        <h3>Agenda</h3>
+        <ol>
+          <li><a href="#unfinished-business">Unfinished Business</a></li>
+          <li><a href="#new-business">New Business</a></li>
+          <li><a href="#additional-comments">Additional Comments</a></li>
+        </ol>
+      </nav>
+    </section>
+
+    <section id="unfinished-business">
+      <h3>Unfinished Business</h3>
+      <p><span>provided an update on the current status of the project, highlighting <b class="highlight">key
+            milestones</b> achieved and upcoming <b class="highlight">deadlines.</b></span></p>
+    </section>
+
+    <section id="new-business">
+      <h3>New Business</h3>
+      <p>Jane discussed <strong>challenges faced in the recent phase</strong> of the project and proposed potential
+        solutions to address them.</p>
+      <hr />
+      <p>Bob presented a new idea for improving the workflow, which was met with positive feedback from the team.</p>
+    </section>
+
+    <section id="additional-comments">
+      <h3>Additional Comments</h3>
+      <p>Bob suggested scheduling <i>regular check-ins</i> to ensure better communication among team members.</p>
+      <hr />
+      <p>John emphasized the importance of <em>meeting deadlines</em> and encouraged the team to stay focused on their
+        tasks.</p>
+    </section>
+
+    <section>
+      <h3>Diagram</h3>
+      <div class="diagram">
+        <img src="project-diagram.png" alt="Project Diagram">
+      </div>
+    </section>
+
+    <section>
+      <h3>Meeting Video</h3>
+      <video controls>
+        <source src="project-update.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <section>
+      <h3>Meeting Audio</h3>
+      <audio controls>
+        <source src="project-update.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+
+    <section>
+      <details>
+        <summary>University of California, San Diego</summary>
+        <p>9500 Gilman Drive<br />
+          La Jolla, CA<br />
+          92093<br />
+          USA<br />
+        </p>
+      </details>
+    </section>
+
+    <section>
+      <form method="get">
+        <div>
+          <label>
+            Name:
+            <input type="text" name="name" required>
+          </label>
+        </div>
+
+        <div>
+          <label>Date:
+            <input type="date" name="meeting-date" value="2026-04-02" />
+          </label>
+        </div>
+
+        <fieldset>
+          <legend>Choose your major:</legend>
+          <div>
+            <input type="checkbox" id="CS" name="CS" checked />
+            <label for="CS">Computer Science</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="Other" name="Other" />
+            <label for="Other">Other</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Choose your year:</legend>
+          <div>
+            <input type="radio" id="freshman" name="year" checked />
+            <label for="freshman">Freshman</label>
+          </div>
+
+          <div>
+            <input type="radio" id="sophomore" name="year" />
+            <label for="sophomore">Sophomore</label>
+          </div>
+
+          <div>
+            <input type="radio" id="junior" name="year" />
+            <label for="junior">Junior</label>
+          </div>
+
+          <div>
+            <input type="radio" id="senior" name="year" />
+            <label for="senior">Senior</label>
+          </div>
+        </fieldset>
+
+        <div>
+          <label for="available-times">Choose your available times:</label>
+          <input list="available-times" name="available-times" id="available-times" />
+
+          <datalist id="available-times">
+            <option value="Monday"></option>
+            <option value="Tuesday"></option>
+            <option value="Wednesday"></option>
+            <option value="Thursday"></option>
+            <option value="Friday"></option>
+          </datalist>
+        </div>
+
+        <div>
+          <label for="time-range">Choose your preferred time range:</label>
+          <select id="time-range" name="time-range">
+            <option value="morning">Morning (8am - 12pm)</option>
+            <option value="afternoon">Afternoon (12pm - 4pm)</option>
+            <option value="evening">Evening (4pm - 8pm)</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="comments">Comments:</label><br />
+          <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        </div>
+
+        <button type="submit">Save</button>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Team Meeting Minutes. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
