@@ -1,0 +1,215 @@
+body {
+    /* ADD BACKGROUND COLOR */
+    background-color: var(--main-bg-color);
+}
+
+h1 {
+    /* ADD COLOR TO HEADING */
+    color: rgb(0, 0, 139);
+    /* ADD FONT TO HEADING */
+    font-family: 'honk', sans-serif;
+    font-size: 4em;
+}
+
+h2 {
+    color: hsl(240, 100%, 25%);
+    /* ADD COLOR TO SUBHEADING */
+}
+
+h3 {
+    color: mediumspringgreen;
+    /* ADD COLOR TO SUBHEADING */
+}
+
+@media (color-gamut: srgb) {
+    p {
+        background-color: color-mix(in srgb, rgb(91, 240, 202), rgb(136, 252, 101));
+        /* ADD BACKGROUND COLOR FOR SRGB GAMUT */
+    }
+}
+
+/* ADD BACKGROUND COLOR FOR OKLAB GAMUT */
+ol:nth-child(1) {
+    background-color: color-mix(in oklab, #ba1ac0 25%, white);
+}
+
+ol:nth-child(2) {
+    background-color: color-mix(in oklab, #ba1ac0 50%, white);
+}
+
+ol:nth-child(3) {
+    background-color: color-mix(in oklab, #ba1ac0 75%, white);
+}
+
+section {
+    --main-bg-color: white;
+    /* DEFINE A CSS VARIABLE FOR BACKGROUND COLOR */
+}
+
+html {
+    font-size: 16px;
+    /* SET BASE FONT SIZE */
+}
+
+.ems ol {
+    font-size: 1.25em;
+    /* SET FONT SIZE TO 1.25 TIMES THE BASE SIZE */
+}
+
+/* ADD BORDER TO CONTAINERS AND PARAGRAPHS */
+.container1 {
+    position: static;
+    display: block;
+    border: 5px solid rebeccapurple;
+    margin: auto;
+}
+
+.addr {
+    border: 5px solid rebeccapurple;
+    background-color: rgb(189, 245, 255);
+    padding: 10px;
+}
+
+.one {
+    margin-bottom: 50px;
+}
+
+.two {
+    margin-top: 30px;
+}
+
+/* ADD BORDER TO CONTAINERS AND PARAGRAPHS */
+.container2 {
+    display: inline-block;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rebeccapurple;
+    border-radius: 0%;
+    margin: 40px;
+}
+
+.unfbus {
+    border: 5px solid rebeccapurple;
+    background-color: rgb(189, 245, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.one {
+    margin-bottom: 50px;
+}
+
+.two {
+    margin-top: 30px;
+}
+
+/* ADD position for right IMAGES */
+.right-image {
+    position: fixed;
+    top: 72px;
+    right: 20px;
+    width: 160px;
+    height: auto;
+}
+
+/* ADD HOVER EFFECT FOR SUBMIT BUTTON */
+.submit-btn {
+    width: 10em;
+    height: 5ex;
+    background-color: rgb(106, 235, 67);
+    border: 2px solid rgb(126, 69, 219);
+    border-radius: 10px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+
+.submit-btn:hover {
+    background-color: rgb(98, 226, 248);
+}
+
+/* Unvisited links */
+a:link {
+    color: blue;
+}
+
+/* Visited links */
+a:visited {
+    color: purple;
+}
+
+/* Hovered links */
+a:hover {
+    background: yellow;
+}
+
+/* Active links */
+a:active {
+    color: red;
+}
+
+/* Active paragraphs */
+p:active {
+    background: #eeeeee;
+}
+
+/* ADD FLEXBOX LAYOUT */
+.flex-container {
+    /* create a flex layout context */
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.flex-item {
+    background: rgb(151, 238, 198);
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+/* ADD GRID LAYOUT */
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: minmax(200px, 1fr) 200px 200px;
+    background-color: #fff;
+    color: #a2fafd;
+}
+
+.grid-item {
+    background-color: #a2fafd;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
+
+/* ADD MEDIA QUERIES FOR RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    /* Styles for mobile */
+}
+
+@media (min-width: 1024px) {
+    /* Styles for desktop */
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    /* Styles for tablets */
+}

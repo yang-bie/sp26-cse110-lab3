@@ -3,14 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Honk:MORF@15&display=swap');
+  </style>
   <title>Team Meeting Minutes</title>
   <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <header>
     <h1>Project Updates</h1>
-    <img src="ucsd-brand-hero-2023.jpg" alt="ucsd brand" width="200">
+    <div class="header-images">
+      <img src="ucsd-brand-hero-2023.jpg" alt="ucsd brand" width="200" class="left-image">
+    </div>
+
+    <img src="favicon.ico" alt="cat" width="100" class="right-image">
     <h2>Weekly Check-in</h2>
     <h2> Date: 4/2/26</h2>
   </header>
@@ -28,7 +36,7 @@
     <section>
       <nav class="menu">
         <h3>Agenda</h3>
-        <ol>
+        <ol class="ems">
           <li><a href="#unfinished-business">Unfinished Business</a></li>
           <li><a href="#new-business">New Business</a></li>
           <li><a href="#additional-comments">Additional Comments</a></li>
@@ -38,42 +46,48 @@
 
     <section id="unfinished-business">
       <h3>Unfinished Business</h3>
-      <p><span>provided an update on the current status of the project, highlighting <b class="highlight">key
+      <p class="unfbus"><span>provided an update on the current status of the project, highlighting <b class="highlight">key
             milestones</b> achieved and upcoming <b class="highlight">deadlines.</b></span></p>
     </section>
 
     <section id="new-business">
       <h3>New Business</h3>
-      <p>Jane discussed <strong>challenges faced in the recent phase</strong> of the project and proposed potential
-        solutions to address them.</p>
-      <hr />
-      <p>Bob presented a new idea for improving the workflow, which was met with positive feedback from the team.</p>
+        <div class="container1" style="text-align: center;">
+          <p class="one" style="color: blue;">Jane discussed <strong>challenges faced in the recent phase</strong> of the project and proposed potential
+            solutions to address them.</p>
+          <hr />
+          <p class="two" style="text-decoration: underline;">Bob presented a new idea for improving the workflow, which was met with positive feedback from the team.</p>
+        </div>
     </section>
 
     <section id="additional-comments">
       <h3>Additional Comments</h3>
-      <p>Bob suggested scheduling <i>regular check-ins</i> to ensure better communication among team members.</p>
-      <hr />
-      <p>John emphasized the importance of <em>meeting deadlines</em> and encouraged the team to stay focused on their
-        tasks.</p>
+      <div class="container2" style="text-align: center;">
+          <p>Bob suggested scheduling <i>regular check-ins</i> to ensure better communication among team members.</p>
+          <hr />
+          <p>John emphasized the importance of <em>meeting deadlines</em> and encouraged the team to stay focused on their
+            tasks.</p>
+      </div>
     </section>
 
     <section>
       <h3>Diagram</h3>
-      <div class="diagram">
+      <div class="diagram" style="height: auto; width: auto; max-width: fit-content; max-height: fit-content;">
         <img src="project-diagram.png" alt="Project Diagram">
       </div>
     </section>
 
     <section>
       <h3>Meeting Video</h3>
-      <video controls>
-        <source src="project-update.mp4" type="video/mp4">
-      </video>
+        <div class="video">
+          <video controls>
+            <source src="project-update.mp4" type="video/mp4">
+          </video>
+        </div>
     </section>
 
     <section>
-      <h3>Meeting Audio</h3>
+      <h3 style="color:rgb(134, 189, 240)">Meeting Audio</h3>
       <audio controls>
         <source src="project-update.mp3" type="audio/mpeg">
       </audio>
@@ -82,7 +96,7 @@
     <section>
       <details>
         <summary>University of California, San Diego</summary>
-        <p>9500 Gilman Drive<br />
+        <p class="addr">9500 Gilman Drive<br />
           La Jolla, CA<br />
           92093<br />
           USA<br />
@@ -168,10 +182,23 @@
           <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
         </div>
 
-        <button type="submit">Save</button>
+        <button class="submit-btn" type="submit">Save</button>
 
       </form>
     </section>
+    <ul class="flex-container">
+      <li class="flex-item">C</li>
+      <li class="flex-item">S</li>
+      <li class="flex-item">E</li>
+      <li class="flex-item">1</li>
+      <li class="flex-item">1</li>
+      <li class="flex-item">0</li>
+    </ul>
+    <div class="grid-container">
+      <div class="grid-item 1">Team</div>
+      <div class="grid-item 2">No.</div>
+      <div class="grid-item 3">8</div>
+    </div>
   </main>
 
   <footer>
