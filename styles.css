@@ -5,7 +5,7 @@
 
 body {
     /* ADD BACKGROUND COLOR */
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color, aliceblue);
 }
 
 h1 {
@@ -89,7 +89,7 @@ html {
     border-radius: 0%;
     margin-top: 40px;
     margin-bottom: 40px;
-    margin-left: 40pxj;
+    margin-left: 40px;
     margin-right: 40px;
 }
 
