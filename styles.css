@@ -1,3 +1,8 @@
+:root {
+    /* DEFINE CSS VARIABLES FOR COLORS */
+    --main-bg-color: rgb(240, 248, 255);
+}
+
 body {
     /* ADD BACKGROUND COLOR */
     background-color: var(--main-bg-color);
@@ -16,10 +21,17 @@ h2, h3{
     /* ADD COLOR TO SUBHEADING */
 }
 
-@media (color-gamut: srgb) {
+p {
+    background-color: rgb(91, 240, 202); /* fallback */
+}
+
+@media (color-gamut: p3) {
     p {
-        background-color: color-mix(in srgb, rgb(91, 240, 202), rgb(136, 252, 101));
-        /* ADD BACKGROUND COLOR FOR SRGB GAMUT */
+        background-color: color-mix(
+            in display-p3,
+            color(display-p3 0.36 0.94 0.79) 50%,
+            color(display-p3 0.53 0.99 0.40) 50%
+        );
     }
 }
 
@@ -36,13 +48,8 @@ ol:nth-child(3) {
     background-color: color-mix(in oklab, #ba1ac0 75%, white);
 }
 
-section {
-    --main-bg-color: white;
-    /* DEFINE A CSS VARIABLE FOR BACKGROUND COLOR */
-}
-
 html {
-    font-size: 16px;
+    font-size: 12pt;
     /* SET BASE FONT SIZE */
 }
 
@@ -55,7 +62,7 @@ html {
 .container1 {
     position: static;
     display: block;
-    border: 5px solid rgb(197, 156, 230);
+    border: 0.132cm solid rgb(197, 156, 230);
     margin: auto;
 }
 
@@ -80,7 +87,10 @@ html {
     border-style: solid;
     border-color: rgb(197, 156, 230);
     border-radius: 0%;
-    margin: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40pxj;
+    margin-right: 40px;
 }
 
 .unfbus {
@@ -97,7 +107,7 @@ html {
 }
 
 .two {
-    margin-top: 30px;
+    margin-top: 1rem;
 }
 
 /* ADD position for right IMAGES */
@@ -155,21 +165,22 @@ p:active {
 .flex-container {
     /* create a flex layout context */
     display: flex;
-
     flex-direction: row;
     flex-wrap: wrap;
-
     justify-content: space-around;
-
+    min-width: 300px;
+    max-width: 1200px;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     list-style: none;
 }
 
 .flex-item {
     background: rgb(151, 238, 198);
     padding: 5px;
-    width: 200px;
+     width: 180px;
+    min-width: 150px;
+    max-width: 250px;
     height: 150px;
     margin-top: 10px;
     line-height: 150px;
@@ -182,9 +193,12 @@ p:active {
 /* ADD GRID LAYOUT */
 .grid-container {
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: minmax(200px, 1fr) 200px 200px;
-    background-color: #fff;
+    gap: 10px;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(240, 248, 255);
     color: #a2fafd;
 }
 
@@ -197,23 +211,50 @@ p:active {
 }
 
 /* ADD MEDIA QUERIES FOR RESPONSIVE DESIGN */
+
+/* phone */
 @media (max-width: 600px) {
-    /* Styles for mobile */
+    .flex-container {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .flex-item {
+        width: 90%;
+        min-width: 0;
+        max-width: 400px;
+        font-size: 2rem;
+    }
 }
 
+/* tablet */
+@media (min-width: 601px) and (max-width: 1023px) {
+    .flex-container {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .flex-item {
+        width: 45%;
+        min-width: 150px;
+        max-width: 300px;
+        font-size: 2.5rem;
+    }
+}
+
+/* desktop */
 @media (min-width: 1024px) {
-    /* Styles for desktop */
-}
+    .flex-container {
+        justify-content: space-around;
+        gap: 20px;
+    }
 
-@media (min-width: 600px) and (max-width: 1023px) {
-    /* Styles for tablets */
-}
-
-/* ADD STYLES FOR FOOTER */
-#footer {
-    background-color: white;
-    text-align: center;
-    padding: 10px;
+    .flex-item {
+        width: 200px;
+        min-width: 150px;
+        max-width: 250px;
+        font-size: 3em;
+    }
 }
 
 /* ADD STYLES FOR IMPORTANT ELEMENTS */
@@ -265,4 +306,8 @@ section:has(.video) {
     & p {
         margin-bottom: 0;
     }
+}
+
+* {
+  box-sizing: border-box;
 }
