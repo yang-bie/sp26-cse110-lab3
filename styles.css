@@ -258,11 +258,11 @@ section:has(.video) {
     border: 2px solid rgb(197, 156, 230);
     padding: 10px;
 
-    h3 {
+    & h3 {
         margin-top: 0;
     }
 
-    .diagram {
+    & .diagram {
         display: flex;
         justify-content: center;
     }
